@@ -1,11 +1,11 @@
-FROM node:20-alpine
+FROM node:25-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
 
-# Install dependencies (production only). If you have a package-lock.json use npm ci instead.
-COPY package*.json ./
-RUN npm install --production --silent
+# Install dependencies (production only).
+COPY package.json package-lock.json ./
+RUN npm ci
 
 # Copy app sources
 COPY . .

@@ -1,11 +1,11 @@
 services:
   timesheet-api:
     build:
-      context: .
-      dockerfile: timesheet-api/Dockerfile
+      context: ./timesheet-api
+      dockerfile: Dockerfile
     restart: unless-stopped
     env_file:
       - .env
     ports:
-      - "${DEFAULT_PORT:-3000}:${TIMESHEET_PORT}"
+      - "3000:3000"
     
