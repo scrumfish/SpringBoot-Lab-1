@@ -43,7 +43,7 @@ From your VS Code session in Linux, use the git icon to clone the lab-1 repo.
 4. When prompted to open the cloned repo, choose **Open**
 You know have the repo on your Linux server and can modify the code in VS Code.
 
-## Part 2
+## Part 2 - Run Service
 1. Open the bash terminal in VS Code.
 2. Change into the `lab-1` folder.
 3. Run `ls` to view the contents of the folder.
@@ -67,7 +67,7 @@ docker compose up --build
 
 When docker compose runs, it will build and spin up the timesheet-api service, but not the others. You will edit the docker compose file to add the Spring Boot service in a moment. For now, we'll test the service with Postman.
 Once you have built with docker compose, you don't have to again until you change the code.
-## Part 2 - Run One Microservice
+## Part 3 - Test One Microservice
 In your bash terminal inside VS Code follow these teps.
 1. Run 
 ```bash
@@ -84,7 +84,7 @@ curl -X POST http://localhost:3000/users \
 ```
 
 4. Finally, run the GET again and observe your new record is listed.
-## Part 3 - Add the Next Microservice
+## Part 4 - Add the Next Microservice
 The final part of this lab is to observe the pattern laid out for the timesheet-api and add the payroll-api to the docker-compose.yml file. Use curl to get http://localhost/8080/api/employees and verify it is working.
 ## Conclusion
 In this lab you ran a simple node express based microservice, then added a Java based microservice to the infrastructure. This is an example of polygot architecture.
